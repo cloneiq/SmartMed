@@ -1,0 +1,10 @@
+{"CXR1000_IM-0003-1001.png":
+{"Real Tags": ["mass lesion", "opacity", "atelectasis", "atelectases", "ribs"],
+  "Pred Tags": ["normal", "degenerative change", "calcified granuloma", "others", "cardiomegaly", "opacity", "atelectases", "atelectasis", "granuloma", "scarring"],
+  "Pred Sentences": {"0": "the man is playing a guitar","1": "a woman is cutting vegetables"},
+  "Real Sentences": {"0": "man is playing guitar"}},
+"CXR1000_IM-0003-1002.png":
+{"Real Tags": ["mass lesion", "opacity", "atelectasis", "atelectases", "ribs"],
+  "Pred Tags": ["normal", "degenerative change", "calcified granuloma", "others", "cardiomegaly", "opacity", "atelectases", "atelectasis", "granuloma", "scarring"],
+  "Pred Sentences": {"0": "a woman is cutting vegetables"},
+  "Real Sentences": {"0": "a woman is cutting vegetables"}}}

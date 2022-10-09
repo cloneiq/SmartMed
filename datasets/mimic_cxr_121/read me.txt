@@ -1,0 +1,5 @@
+One-to-one image and report pairs were selected from the dataset, and the impressions and findings were included in the report.
+Trains reports：17708
+Test reports：5905
+Valid reports：5904
+Total：29517

@@ -1,0 +1,46 @@
+
+#生成1-1的报告与图像数据
+create table ds_mimic_cxr_one
+SELECT
+reports.report_id,
+TRIM(reports.history),
+TRIM(reports.findings),
+TRIM(reports.impressions),
+reports.lables,
+images.image_id,
+images.view_position,
+images.img_rows,
+images.img_columns
+FROM
+ds_mimic_cxr_reports AS reports ,
+ds_minic_cxr_images AS images
+WHERE
+reports.report_id = images.report_id AND
+(select count(report_id) from ds_minic_cxr_images where reports.report_id = ds_minic_cxr_images.report_id) =1
+ORDER BY
+reports.report_id ASC
+#选出finding和impressions都不为空的报告
+select * from ds_mimic_cxr_one1
+where findings!='None' and
+impressions != 'None'
+
+#生成1-2的报告与图像数据（一个报告包含两张图像）
+create table ds_mimic_cxr_two
+SELECT
+reports.report_id,
+TRIM(reports.history),
+TRIM(reports.findings),
+TRIM(reports.impressions),
+reports.lables,
+images.image_id,
+images.view_position,
+images.img_rows,
+images.img_columns
+FROM
+ds_mimic_cxr_reports AS reports ,
+ds_minic_cxr_images AS images
+WHERE
+reports.report_id = images.report_id AND
+(select count(report_id) from ds_minic_cxr_images where reports.report_id = ds_minic_cxr_images.report_id) =2
+ORDER BY
+reports.report_id ASC
